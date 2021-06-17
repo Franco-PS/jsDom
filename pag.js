@@ -1,34 +1,13 @@
-const nombre= document.getElementById('alum')
-const button= document.querySelector('button')
-// const dato= e => alert(e.target.textContent)
-
-// nombre.addEventListener('dblclick',e => {
-//     dato(e)
-// })
-// button.addEventListener('click',e =>{
-//     dato(e)
-// })
-
-const creaMenu= e=> {
-    const menu= document.createElement('div')
-    const prevMenu= document.getElementById('menuu')
-    menu.setAttribute('id','menuu')
-    menu.textContent= 'document'
-
-    if(prevMenu){
-        document.body.removeChild(prevMenu)
+const button= document.getElementById('boton')
+const title= document.getElementById('alum')
+const desplazamenu= ()=>{
+    // queriSelector no puede ir en el if(..)?
+    if(document.getElementById('boton')){
+        console.log('hola')
     }
 
-    document.body.appendChild(menu)
+    button.classList.toggle('buttonDisable')
 
-    menu.style.background= '#eee'
-    menu.style.padding= '1em'
-    menu.style.position= 'fixed'
-    menu.style.top= `${e.pageY}px`
-    menu.style.left= `${e.pageX}px`
 }
 
-document.addEventListener('contextmenu', e => {
-    creaMenu(e)
-    e.preventDefault()
-})
+title.addEventListener('click',desplazamenu)
