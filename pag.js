@@ -1,12 +1,12 @@
 const nombre= document.getElementById('alum')
 const button= document.querySelector('button')
-const dato= e=>alert(e)
+const dato= e => {
+    alert(e.target.textContent)
+}
 
-nombre.addEventListener('click',()=>{
-    dato(nombre.textContent)
+nombre.addEventListener('dblclick',e => {
+    dato(e)
 })
-button.addEventListener('click',()=>{
-    dato(button.textContent)
+button.addEventListener('click',e =>{
+    dato(e)
 })
-
-// console.log(nombre)
