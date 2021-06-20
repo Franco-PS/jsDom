@@ -1,9 +1,20 @@
-.menu {
-  display: inline-block;
-  color: orangered;
-  background-color: orchid;
-  font-size: 50px; }
-
 body {
-  background-color: orchid;
-  font-size: 20px; }
+  background-color: brown; }
+
+h3 {
+  color: burlywood;
+  margin-top: 1px solid purple; }
+
+.buttonDisable {
+  display: flex;
+  margin: 1em 0;
+  padding: auto; }
+
+.dudo, .buttonEnable {
+  display: flex;
+  margin: 1em 0;
+  padding: auto;
+  position: relative; }
+
+.buttonDisable {
+  background: red; }

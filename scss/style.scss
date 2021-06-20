@@ -1,9 +1,30 @@
-$var:20px;
-@import "menu";
+@import "componen/variables";
+@import "button/button";
+
+h3{
+    color: burlywood;
+    margin-top: 1px solid purple;
+}
 
 
 
-body{
-    background-color: orchid;
-    font-size: $var;
+%button{
+    display: flex;
+    margin: 1em 0;
+    padding: auto;
+}
+
+.dudo{
+    display: flex;
+    margin: 1em 0;
+    padding: auto;
+    position: relative;
+}
+.buttonEnable{
+    @extend .dudo;
+}
+
+.buttonDisable{
+    background: red;
+    @extend %button;
 }
